@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<div class="home">
+  <h1 class="page-heading">
+    <span class="content-he">{{ page.title_he | default: page.title | escape }}</span>
+    <span class="content-en">{{ page.title | escape }}</span>
+  </h1>
+  {{ content }}
+</div>

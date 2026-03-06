@@ -1,0 +1,21 @@
+title: "SEO & Digital Marketing Hub"
+description: "Expert guides on SEO strategies, promotion tactics, and digital agency services that drive measurable organic growth."
+baseurl: ""
+url: "https://promoteseo.co.il"
+theme: minima
+permalink: /:slug/
+lang: he
+
+title_he: "מרכז SEO ושיווק דיגיטלי"
+description_he: "מדריכים מקצועיים לאסטרטגיות קידום אתרים, טקטיקות קידום ושירותי סוכנויות דיגיטליות להשגת צמיחה אורגנית מדידה."
+title_en: "SEO & Digital Marketing Hub"
+description_en: "Expert guides on SEO strategies, promotion tactics, and digital agency services that drive measurable organic growth."
+
+header_pages:
+  - seo/index.md
+  - seo-promotion-strategies/index.md
+  - digital-agency/index.md
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

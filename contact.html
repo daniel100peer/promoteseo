@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צור קשר -- NEXUS Digital</title>
+  <meta name="description" content="יש לכם פרויקט בראש? בואו נדבר. פנו ל-NEXUS Digital כדי להתחיל לבנות משהו יוצא דופן.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" charset="UTF-8"></script>
+  <script src="i18n.js" charset="UTF-8"></script>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAV -->
+  <nav class="navbar navbar--glass" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">NEXUS<span>.</span></a>
+      <div class="navbar__links">
+        <a href="index.html" data-i18n="nav.home">דף הבית</a>
+        <a href="about.html" data-i18n="nav.about">אודות</a>
+        <a href="blog.html" data-i18n="nav.insights">תובנות</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact">צור קשר</a>
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn is-active" data-lang="he" onclick="toggleLanguage('he')">עב</button>
+          <button class="lang-toggle__btn" data-lang="en" onclick="toggleLanguage('en')">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.cta">התחילו פרויקט</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" data-i18n-aria="nav.menu-aria" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <a href="index.html" data-i18n="nav.home">דף הבית</a>
+    <a href="about.html" data-i18n="nav.about">אודות</a>
+    <a href="blog.html" data-i18n="nav.insights">תובנות</a>
+    <a href="contact.html" data-i18n="nav.contact">צור קשר</a>
+    <div class="lang-toggle">
+      <button class="lang-toggle__btn is-active" data-lang="he" onclick="toggleLanguage('he')">עב</button>
+      <button class="lang-toggle__btn" data-lang="en" onclick="toggleLanguage('en')">EN</button>
+    </div>
+  </div>
+
+
+  <!-- CONTACT HERO -->
+  <section class="page-hero section">
+    <div class="container">
+      <p class="t-eyebrow reveal-blur" style="color:var(--accent); margin-bottom:8px;" data-i18n="contact.hero.eyebrow">צרו קשר</p>
+      <h1 class="t-hero reveal-blur" data-i18n-html="contact.hero.title">בואו ניצור משהו<br>יוצא דופן.</h1>
+      <p class="t-body-lg page-hero__subtitle reveal" data-i18n="contact.hero.subtitle">יש לכם פרויקט בראש? נשמח לשמוע עליו. ספרו לנו מה אתם בונים ונחזור אליכם תוך 24 שעות.</p>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <section style="padding-bottom:var(--section-padding);">
+    <div class="container">
+      <div class="img-reveal" style="aspect-ratio:21/9;">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Modern office space" class="zoom-on-scroll" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT FORM -->
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="max-width:var(--max-width-wide);">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="reveal-left">
+          <form class="card" style="padding:40px;" onsubmit="event.preventDefault(); this.querySelector('.form-success').style.display='block'; this.querySelector('button[type=submit]').textContent=document.documentElement.lang==='he'?'נשלח!':'Sent!';">
+            <h2 class="t-tile" style="margin-bottom:32px;" data-i18n="contact.form.title">התחילו שיחה.</h2>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+              <div class="form-group">
+                <label for="firstName" data-i18n="contact.form.first">שם פרטי</label>
+                <input type="text" id="firstName" class="form-input" placeholder="ישראל" data-i18n-placeholder="contact.ph.first">
+              </div>
+              <div class="form-group">
+                <label for="lastName" data-i18n="contact.form.last">שם משפחה</label>
+                <input type="text" id="lastName" class="form-input" placeholder="ישראלי" data-i18n-placeholder="contact.ph.last">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" data-i18n="contact.form.email">אימייל</label>
+              <input type="email" id="email" class="form-input" placeholder="israel@company.com" data-i18n-placeholder="contact.ph.email">
+            </div>
+
+            <div class="form-group">
+              <label for="company" data-i18n="contact.form.company">חברה</label>
+              <input type="text" id="company" class="form-input" placeholder="שם החברה שלכם" data-i18n-placeholder="contact.ph.company">
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.help">במה נוכל לעזור?</label>
+              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;">
+                <label style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; background:rgba(255,255,255,0.04); border:1px solid var(--separator); border-radius:var(--radius-pill); font-size:var(--font-caption); cursor:pointer; transition: border-color 0.3s ease;">
+                  <input type="checkbox" style="accent-color:var(--accent);" value="brand"> <span data-i18n="contact.form.check1">אסטרטגיית מותג</span>
+                </label>
+                <label style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; background:rgba(255,255,255,0.04); border:1px solid var(--separator); border-radius:var(--radius-pill); font-size:var(--font-caption); cursor:pointer; transition: border-color 0.3s ease;">
+                  <input type="checkbox" style="accent-color:var(--accent);" value="web"> <span data-i18n="contact.form.check2">פיתוח אתרים</span>
+                </label>
+                <label style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; background:rgba(255,255,255,0.04); border:1px solid var(--separator); border-radius:var(--radius-pill); font-size:var(--font-caption); cursor:pointer; transition: border-color 0.3s ease;">
+                  <input type="checkbox" style="accent-color:var(--accent);" value="design"> <span data-i18n="contact.form.check3">עיצוב UI/UX</span>
+                </label>
+                <label style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; background:rgba(255,255,255,0.04); border:1px solid var(--separator); border-radius:var(--radius-pill); font-size:var(--font-caption); cursor:pointer; transition: border-color 0.3s ease;">
+                  <input type="checkbox" style="accent-color:var(--accent);" value="marketing"> <span data-i18n="contact.form.check4">שיווק דיגיטלי</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="budget" data-i18n="contact.form.budget">תקציב משוער</label>
+              <select id="budget" class="form-input" style="cursor:pointer;">
+                <option value="" disabled selected data-i18n="contact.form.budget-default">בחרו טווח</option>
+                <option value="10-25">$10,000 - $25,000</option>
+                <option value="25-50">$25,000 - $50,000</option>
+                <option value="50-100">$50,000 - $100,000</option>
+                <option value="100+">$100,000+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" data-i18n="contact.form.project">ספרו לנו על הפרויקט שלכם</label>
+              <textarea id="message" class="form-input" placeholder="מה אתם בונים? איזו בעיה אתם מנסים לפתור?" data-i18n-placeholder="contact.ph.project"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px;">
+              <span data-i18n="contact.form.submit">שלחו הודעה</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+
+            <div class="form-success" style="display:none; margin-top:20px; padding:16px; background:rgba(41,151,255,0.08); border:1px solid rgba(41,151,255,0.2); border-radius:var(--radius-sm); text-align:center;">
+              <p style="color:var(--accent); font-weight:600;" data-i18n="contact.form.success">ההודעה נשלחה בהצלחה.</p>
+              <p style="color:var(--text-secondary); font-size:var(--font-caption); margin-top:4px;" data-i18n="contact.form.success-sub">נחזור אליכם תוך 24 שעות.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="reveal-right">
+          <div style="padding:8px 0;">
+            <h3 class="t-tile" style="margin-bottom:32px;" data-i18n="contact.info.title">או פנו אלינו ישירות.</h3>
+
+            <!-- Email -->
+            <div style="display:flex; align-items:flex-start; gap:16px; margin-bottom:36px;">
+              <div style="width:48px; height:48px; border-radius:var(--radius-sm); background:rgba(41,151,255,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <polyline points="22,4 12,13 2,4"/>
+                </svg>
+              </div>
+              <div>
+                <p style="font-weight:600; color:var(--text-primary); margin-bottom:2px;" data-i18n="contact.info.email-label">אימייל</p>
+                <a href="mailto:hello@nexusdigital.co" style="color:var(--text-secondary); transition:color 0.3s ease;">hello@nexusdigital.co</a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div style="display:flex; align-items:flex-start; gap:16px; margin-bottom:36px;">
+              <div style="width:48px; height:48px; border-radius:var(--radius-sm); background:rgba(41,151,255,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <p style="font-weight:600; color:var(--text-primary); margin-bottom:2px;" data-i18n="contact.info.loc-label">מיקום</p>
+                <p style="color:var(--text-secondary);" data-i18n-html="contact.info.loc-value">אוסטין, טקסס<br>עם שותפים ב-3 אזורי זמן</p>
+              </div>
+            </div>
+
+            <!-- Response Time -->
+            <div style="display:flex; align-items:flex-start; gap:16px; margin-bottom:36px;">
+              <div style="width:48px; height:48px; border-radius:var(--radius-sm); background:rgba(41,151,255,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px; height:22px;">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div>
+                <p style="font-weight:600; color:var(--text-primary); margin-bottom:2px;" data-i18n="contact.info.time-label">זמן תגובה</p>
+                <p style="color:var(--text-secondary);" data-i18n="contact.info.time-value">אנחנו מגיבים לכל פנייה תוך 24 שעות. בדרך כלל הרבה יותר מהר.</p>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div style="margin-top:40px; padding-top:28px; border-top:1px solid var(--separator);">
+              <p style="font-weight:600; color:var(--text-primary); margin-bottom:16px;" data-i18n="contact.info.follow">עקבו אחרינו</p>
+              <div class="footer__social">
+                <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16h-4.267z"/><path d="M4 20l6.768-6.768m2.46-2.46l6.772-6.772"/></svg></a>
+                <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section section--elevated">
+    <div class="container" style="max-width:680px;">
+      <div class="text-center reveal-blur" style="margin-bottom:48px;">
+        <h2 class="t-section" data-i18n="contact.faq.title">שאלות נפוצות.</h2>
+      </div>
+
+      <div class="stagger-children" style="display:flex; flex-direction:column; gap:12px;">
+        <details class="card" style="cursor:pointer; padding:24px 28px;">
+          <summary style="font-weight:600; color:var(--text-primary); font-size:17px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+            <span data-i18n="contact.faq.q1">מהו לוח הזמנים הטיפוסי לפרויקט?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px; height:18px; flex-shrink:0; transition:transform 0.3s ease;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p style="margin-top:16px; color:var(--text-secondary); font-size:15px; line-height:1.58;" data-i18n="contact.faq.a1">רוב הפרויקטים נמשכים 8 עד 16 שבועות מהתחלה ועד השקה, תלוי בהיקף. פרויקט אסטרטגיית מותג בדרך כלל לוקח 4 עד 6 שבועות, בעוד שבנייה מלאה של אתר עם אסטרטגיה יכולה להימשך 12 עד 16 שבועות. ניתן לכם לוח זמנים מפורט בשלב הגילוי.</p>
+        </details>
+
+        <details class="card" style="cursor:pointer; padding:24px 28px;">
+          <summary style="font-weight:600; color:var(--text-primary); font-size:17px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+            <span data-i18n="contact.faq.q2">מהו התקציב המינימלי לפרויקט?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px; height:18px; flex-shrink:0; transition:transform 0.3s ease;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p style="margin-top:16px; color:var(--text-secondary); font-size:15px; line-height:1.58;" data-i18n="contact.faq.a2">ההתקשרויות שלנו בדרך כלל מתחילות ב-$15,000 לעבודת אסטרטגיה עצמאית ו-$25,000 לפרויקטי עיצוב ופיתוח. אנחנו משקיעים לעומק בכל פרויקט שאנחנו לוקחים, ולכן אנחנו סלקטיביים לגבי התאמה ולא נפח.</p>
+        </details>
+
+        <details class="card" style="cursor:pointer; padding:24px 28px;">
+          <summary style="font-weight:600; color:var(--text-primary); font-size:17px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+            <span data-i18n="contact.faq.q3">האם אתם עובדים עם סטארטאפים?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px; height:18px; flex-shrink:0; transition:transform 0.3s ease;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p style="margin-top:16px; color:var(--text-secondary); font-size:15px; line-height:1.58;" data-i18n="contact.faq.a3">בהחלט. כ-40% מהלקוחות שלנו הם סטארטאפים ממומנים. אנחנו אוהבים לעבוד עם צוותים שנעים מהר וחושבים בגדול. הדרישה העיקרית היא שהיקף הפרויקט והתקציב יתאימו -- אנחנו מביאים את אותה איכות לכל התקשרות ללא קשר לגודל החברה.</p>
+        </details>
+
+        <details class="card" style="cursor:pointer; padding:24px 28px;">
+          <summary style="font-weight:600; color:var(--text-primary); font-size:17px; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;">
+            <span data-i18n="contact.faq.q4">מה קורה אחרי ההשקה?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px; height:18px; flex-shrink:0; transition:transform 0.3s ease;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p style="margin-top:16px; color:var(--text-secondary); font-size:15px; line-height:1.58;" data-i18n="contact.faq.a4">אנחנו מציעים יחסי ריטיינר שוטפים ללקוחות שרוצים אופטימיזציה מתמשכת, עדכוני תוכן ושיפורים איטרטיביים. הרבה מהתוצאות הטובות ביותר שלנו מגיעות משלב שלאחר ההשקה, כשאנחנו יכולים להשתמש בנתוני משתמשים אמיתיים לשיפור החוויה.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__brand">
+          <a href="index.html" class="navbar__logo">NEXUS<span>.</span></a>
+          <p data-i18n="footer.brand-desc">אסטרטגיה, עיצוב ופיתוח לחברות שמוכנות להוביל.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16h-4.267z"/><path d="M4 20l6.768-6.768m2.46-2.46l6.772-6.772"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.services">שירותים</h4>
+          <a href="#" data-i18n="footer.brand-strategy">אסטרטגיית מותג</a><a href="#" data-i18n="footer.web-dev">פיתוח אתרים</a><a href="#" data-i18n="footer.uiux">עיצוב UI/UX</a><a href="#" data-i18n="footer.digital-mktg">שיווק דיגיטלי</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.company">החברה</h4>
+          <a href="about.html" data-i18n="footer.about">אודות</a><a href="blog.html" data-i18n="footer.insights">תובנות</a><a href="contact.html" data-i18n="footer.contact">צור קשר</a><a href="#" data-i18n="footer.careers">קריירה</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.stay-updated">הישארו מעודכנים</h4>
+          <p style="font-size:var(--font-footnote); color:var(--text-secondary); margin-bottom:8px;" data-i18n="footer.newsletter-desc">תובנות ישירות לתיבת הדואר שלכם.</p>
+          <form class="footer__newsletter" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="your@email.com" data-i18n-placeholder="contact.ph.newsletter" aria-label="אימייל">
+            <button type="submit" data-i18n="footer.subscribe">הרשמה</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 NEXUS Digital. כל הזכויות שמורות.</p>
+        <div style="display:flex; gap:16px;">
+          <a href="#" data-i18n="footer.privacy">פרטיות</a><a href="#" data-i18n="footer.terms">תנאים</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

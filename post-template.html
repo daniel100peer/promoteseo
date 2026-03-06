@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>למה המיתוג מחדש שלכם נכשל -- NEXUS Digital</title>
+  <meta name="description" content="רוב המיתוגים מחדש נכשלים לא בגלל עיצוב גרוע, אלא בגלל אסטרטגיה לא ברורה. אנחנו מפרקים את שלוש השאלות שכל מותג צריך לענות עליהן קודם.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" charset="UTF-8"></script>
+  <script src="i18n.js" charset="UTF-8"></script>
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div class="reading-progress"></div>
+
+  <!-- NAV -->
+  <nav class="navbar navbar--glass" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">NEXUS<span>.</span></a>
+      <div class="navbar__links">
+        <a href="index.html" data-i18n="nav.home">דף הבית</a>
+        <a href="about.html" data-i18n="nav.about">אודות</a>
+        <a href="blog.html" class="active" data-i18n="nav.insights">תובנות</a>
+        <a href="contact.html" data-i18n="nav.contact">צור קשר</a>
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn is-active" data-lang="he" onclick="toggleLanguage('he')">עב</button>
+          <button class="lang-toggle__btn" data-lang="en" onclick="toggleLanguage('en')">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.cta">התחילו פרויקט</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" data-i18n-aria="nav.menu-aria" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <a href="index.html" data-i18n="nav.home">דף הבית</a>
+    <a href="about.html" data-i18n="nav.about">אודות</a>
+    <a href="blog.html" data-i18n="nav.insights">תובנות</a>
+    <a href="contact.html" data-i18n="nav.contact">צור קשר</a>
+    <div class="lang-toggle">
+      <button class="lang-toggle__btn is-active" data-lang="he" onclick="toggleLanguage('he')">עב</button>
+      <button class="lang-toggle__btn" data-lang="en" onclick="toggleLanguage('en')">EN</button>
+    </div>
+  </div>
+
+
+  <!-- POST HERO -->
+  <section class="post-hero">
+    <div class="container">
+      <a href="blog.html" class="link-cta reveal" style="font-size:var(--font-caption); margin-bottom:32px; display:inline-flex;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(180deg);"><polyline points="9 18 15 12 9 6"/></svg>
+        <span data-i18n="post.back">חזרה לתובנות</span>
+      </a>
+      <p class="t-footnote reveal-blur" style="color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;" data-i18n="post.hero.cat">אסטרטגיה</p>
+      <h1 class="t-section reveal-blur" data-i18n="post.hero.title">למה המיתוג מחדש שלכם נכשל (ומה לעשות אחרת הפעם)</h1>
+      <div class="post-hero__meta reveal">
+        <span data-i18n="post.hero.author">מאת מאיה צ&#x2019;ן</span>
+        <span data-i18n="post.hero.date">12 בפברואר 2026</span>
+        <span data-i18n="post.hero.read">8 דקות קריאה</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="container" style="margin-bottom:var(--section-padding);">
+    <div class="img-reveal" style="max-width:900px; margin-inline:auto; aspect-ratio:16/9;">
+      <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=1200&q=80" alt="Creative branding workspace" class="zoom-on-scroll" loading="lazy">
+    </div>
+  </div>
+
+
+  <!-- POST CONTENT -->
+  <article class="post-content section" style="padding-top:0;">
+
+    <div class="reveal">
+      <p data-i18n="post.p1">רוב המיתוגים מחדש נכשלים לא בגלל עיצוב גרוע, אלא בגלל אסטרטגיה לא ברורה. ראינו חברות שופכות שש ספרות על זהות חזותית חדשה, רק כדי לקבל משהו שנראה אחרת אבל מרגיש בדיוק אותו דבר.</p>
+
+      <p data-i18n="post.p2">הדפוס תמיד דומה: חברה מחליטה שהיא צריכה &#x201C;רענון.&#x201D; היא שוכרת סוכנות עיצוב, עוברת לוחות השראה ופלטות צבעים, משיקה את המראה החדש, ואז... שום דבר לא משתנה. אותו קהל, אותה תפיסה, אותן תוצאות. המיתוג מחדש הופך לתרגיל קוסמטי שבולע תקציב בלי לקדם את העסק.</p>
+
+      <h2 data-i18n="post.h2-1">שלוש השאלות שצריך לענות עליהן קודם</h2>
+
+      <p data-i18n="post.p3">לפני שאתם פותחים את Figma, לפני שאתם בוחנים גופנים, לפני שאתם בכלל חושבים על לוגו, אתם צריכים בהירות בשלוש שאלות יסודיות. דלגו על אחת מהן, והמיתוג מחדש שלכם ייבנה על חול.</p>
+
+      <h3 data-i18n="post.h3-1">1. למה אנחנו עושים את זה?</h3>
+
+      <p data-i18n="post.p4">זה נשמע ברור מאליו, אבל זו השאלה שהכי הרבה פעמים עונים עליה בשטחיות. &#x201C;המותג שלנו נראה מיושן&#x201D; זו לא אסטרטגיה. &#x201C;אנחנו נכנסים לפלח שוק חדש והמותג הנוכחי שלנו יוצר חיכוך עם קונים ארגוניים&#x201D; &#x2013; זו אסטרטגיה.</p>
+
+      <blockquote data-i18n="post.blockquote">מיתוג מחדש ללא מטרה עסקית ברורה הוא סתם שיפוץ. יפה, אולי. אפקטיבי, אף פעם.</blockquote>
+
+      <p data-i18n="post.p5">המיתוגים מחדש הטובים ביותר שביצענו כולם התחילו עם בעיה עסקית ספציפית ומדידה. השינוי החזותי היה הפתרון, לא נקודת ההתחלה.</p>
+
+      <h3 data-i18n="post.h3-2">2. מה אנחנו רוצים שאנשים ירגישו?</h3>
+
+      <p data-i18n="post.p6">מותגים הם לא לוגואים. מותגים הם השאריות הרגשיות של כל אינטראקציה שיש למישהו עם החברה שלכם. מיתוג מחדש צריך להזיז את הטריטוריה הרגשית הזו בכוונה.</p>
+
+      <p data-i18n="post.p7">מפו את המסע הרגשי שאתם רוצים:</p>
+      <ul>
+        <li data-i18n="post.li1">רושם ראשוני: מה צריך מישהו להרגיש כשהוא נתקל לראשונה במותג שלכם?</li>
+        <li data-i18n="post.li2">במהלך מעורבות: אילו רגשות המוצר או השירות שלכם צריכים לעורר?</li>
+        <li data-i18n="post.li3">אחרי החוויה: מה הם צריכים לזכור ולספר לאחרים?</li>
+      </ul>
+
+      <p data-i18n="post.p8">ללא ארכיטקטורה רגשית כזו, מעצבים מקבלים החלטות אסתטיות ללא מצפן. הם ייצרו משהו שנראה טוב בפורטפוליו אבל לא מהדהד בשוק.</p>
+    </div>
+
+    <!-- Inline image -->
+    <div class="img-reveal" style="margin-block:40px; aspect-ratio:16/9;">
+      <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80" alt="Design workshop with mood boards and color palettes" class="zoom-on-scroll" loading="lazy">
+    </div>
+
+    <div class="reveal">
+      <h3 data-i18n="post.h3-3">3. על מה אנחנו מוכנים לוותר?</h3>
+
+      <p data-i18n="post.p9">כל מותג חזק מייצג משהו ספציפי, מה שאומר שהוא לא יכול לייצג הכול. הנכונות להוציא -- לומר &#x201C;זה לא לכולם&#x201D; -- היא מה שנותנת למותג את החדות שלו.</p>
+
+      <p data-i18n="post.p10">אנחנו שואלים כל לקוח: אם המותג שלכם היה אדם, עם מי הוא היה מסרב לאכול ארוחת ערב? התשובה חושפת יותר על מיצוב המותג מכל לוח השראה.</p>
+
+      <h2 data-i18n="post.h2-2">המסגרת שאנחנו משתמשים בה</h2>
+
+      <p data-i18n="post.p11">ב-NEXUS, אנחנו מעבירים כל מיתוג מחדש דרך מסגרת בת חמישה שלבים שמבטיחה בהירות אסטרטגית לפני שמתחיל הביצוע היצירתי:</p>
+
+      <ol>
+        <li data-i18n-html="post.ol1"><strong>ביקורת:</strong> נוף תחרותי, תפיסה נוכחית וניתוח פערים</li>
+        <li data-i18n-html="post.ol2"><strong>הגדרה:</strong> הצהרת מיצוב, תכונות מותג וטריטוריה רגשית</li>
+        <li data-i18n-html="post.ol3"><strong>ארכיטקטורה:</strong> היררכיית מותג, מערכת שמות וזהות מילולית</li>
+        <li data-i18n-html="post.ol4"><strong>עיצוב:</strong> חקירת זהות חזותית המעוגנת באסטרטגיה</li>
+        <li data-i18n-html="post.ol5"><strong>הפעלה:</strong> תוכנית השקה עם מדדי הצלחה ברורים</li>
+      </ol>
+
+      <p data-i18n="post.p12">שלושת השלבים הראשונים בדרך כלל לוקחים כמו שלב העיצוב עצמו. היחס הזה מכוון. אסטרטגיה היא הבסיס; עיצוב הוא הביטוי.</p>
+
+      <h2 data-i18n="post.h2-3">מדידת הצלחה</h2>
+
+      <p data-i18n="post.p13">מיתוג מחדש צריך להיות מדיד. לפני ההשקה, קבעו את מדדי הבסיס שלכם: מודעות למותג, שיקול, Net Promoter Score, שיעורי המרה וגודל עסקה ממוצע. אחרי ההשקה, עקבו אחריהם מדי חודש לפחות שישה חודשים.</p>
+
+      <p data-i18n="post.p14">המיתוגים מחדש שאנחנו הכי גאים בהם הם לא אלה שזכו בפרסי עיצוב (למרות שכמה כן). הם אלה שבהם לקוחות יכולים להצביע על שיפורים ספציפיים ומדידים בביצועים העסקיים שנובעים ישירות מעבודת המותג.</p>
+
+      <p data-i18n="post.p15">אם אתם שוקלים מיתוג מחדש, נשמח לשיחה על האם זה הצעד הנכון -- ואם כן, איך לעשות את זה בצורה שבאמת עובדת.</p>
+    </div>
+  </article>
+
+
+  <!-- AUTHOR BIO -->
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="max-width:680px;">
+      <div class="card reveal" style="display:flex; gap:24px; align-items:center; flex-wrap:wrap; padding:32px;">
+        <div class="team-card__avatar" style="margin:0; flex-shrink:0;">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80" alt="Maya Chen">
+        </div>
+        <div style="flex:1; min-width:200px;">
+          <h3 style="font-size:17px; color:var(--text-primary); margin-bottom:2px;" data-i18n="post.author.name">מאיה צ&#x2019;ן</h3>
+          <p style="color:var(--accent); font-size:var(--font-caption); font-weight:600; margin-bottom:6px;" data-i18n="post.author.role">מייסדת ומנהלת קריאייטיב</p>
+          <p style="color:var(--text-secondary); font-size:var(--font-caption);" data-i18n="post.author.bio">שמונה שנות ניהול עיצוב בשני סטארטאפים של Y Combinator לפני הקמת NEXUS. היא מאמינה שהחוויות הדיגיטליות הטובות ביותר מרגישות שקופות -- הן פשוט עובדות.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RELATED POSTS -->
+  <section class="section section--elevated">
+    <div class="container">
+      <h2 class="t-tile reveal-blur" style="margin-bottom:32px; text-align:center;" data-i18n="post.related.title">תובנות נוספות</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+        <a href="post-template.html" class="card reveal-scale" style="text-decoration:none;">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Server infrastructure" loading="lazy">
+          </div>
+          <div class="card__body">
+            <span class="t-footnote" style="color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:0.08em;" data-i18n="post.related.tag1">ביצועים</span>
+            <h3 style="margin-top:6px;" data-i18n="post.related.title1">מס הביצועים: כמה עולים לכם אתרים איטיים</h3>
+            <p class="t-footnote" style="margin-top:8px;" data-i18n="post.related.date1">28 בינואר 2026</p>
+          </div>
+        </a>
+        <a href="post-template.html" class="card reveal-scale" style="text-decoration:none;">
+          <div class="card__img">
+            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80" alt="UX design wireframes" loading="lazy">
+          </div>
+          <div class="card__body">
+            <span class="t-footnote" style="color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:0.08em;" data-i18n="post.related.tag2">עיצוב</span>
+            <h3 style="margin-top:6px;" data-i18n="post.related.title2">עיצוב לאמון: דפוסי ה-UX הבלתי נראים</h3>
+            <p class="t-footnote" style="margin-top:8px;" data-i18n="post.related.date2">15 בינואר 2026</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <div class="footer-cta__orb footer-cta__orb--left"></div>
+    <div class="footer-cta__orb footer-cta__orb--right"></div>
+    <div class="container" style="position:relative; z-index:2;">
+      <h2 class="t-section reveal-blur" data-i18n="post.cta.title">מוכנים לחשוב מחדש על המותג שלכם?</h2>
+      <div style="margin-top:28px;">
+        <a href="contact.html" class="link-cta reveal">
+          <span data-i18n="post.cta.link">בואו נדבר אסטרטגיה</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__brand">
+          <a href="index.html" class="navbar__logo">NEXUS<span>.</span></a>
+          <p data-i18n="footer.brand-desc">אסטרטגיה, עיצוב ופיתוח לחברות שמוכנות להוביל.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16h-4.267z"/><path d="M4 20l6.768-6.768m2.46-2.46l6.772-6.772"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.services">שירותים</h4>
+          <a href="#" data-i18n="footer.brand-strategy">אסטרטגיית מותג</a><a href="#" data-i18n="footer.web-dev">פיתוח אתרים</a><a href="#" data-i18n="footer.uiux">עיצוב UI/UX</a><a href="#" data-i18n="footer.digital-mktg">שיווק דיגיטלי</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.company">החברה</h4>
+          <a href="about.html" data-i18n="footer.about">אודות</a><a href="blog.html" data-i18n="footer.insights">תובנות</a><a href="contact.html" data-i18n="footer.contact">צור קשר</a><a href="#" data-i18n="footer.careers">קריירה</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.stay-updated">הישארו מעודכנים</h4>
+          <p style="font-size:var(--font-footnote); color:var(--text-secondary); margin-bottom:8px;" data-i18n="footer.newsletter-desc">תובנות ישירות לתיבת הדואר שלכם.</p>
+          <form class="footer__newsletter" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="your@email.com" data-i18n-placeholder="contact.ph.newsletter" aria-label="אימייל">
+            <button type="submit" data-i18n="footer.subscribe">הרשמה</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 NEXUS Digital. כל הזכויות שמורות.</p>
+        <div style="display:flex; gap:16px;">
+          <a href="#" data-i18n="footer.privacy">פרטיות</a><a href="#" data-i18n="footer.terms">תנאים</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אודות -- NEXUS Digital</title>
+  <meta name="description" content="למדו על NEXUS Digital -- המשימה, הערכים, הצוות והתהליך שלנו ליצירת חוויות דיגיטליות יוצאות דופן.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" charset="UTF-8"></script>
+  <script src="i18n.js" charset="UTF-8"></script>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAV -->
+  <nav class="navbar navbar--glass" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">NEXUS<span>.</span></a>
+      <div class="navbar__links">
+        <a href="index.html" data-i18n="nav.home">דף הבית</a>
+        <a href="about.html" class="active" data-i18n="nav.about">אודות</a>
+        <a href="blog.html" data-i18n="nav.insights">תובנות</a>
+        <a href="contact.html" data-i18n="nav.contact">צור קשר</a>
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn is-active" data-lang="he" onclick="toggleLanguage('he')">עב</button>
+          <button class="lang-toggle__btn" data-lang="en" onclick="toggleLanguage('en')">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.cta">התחילו פרויקט</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" data-i18n-aria="nav.menu-aria" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <a href="index.html" data-i18n="nav.home">דף הבית</a>
+    <a href="about.html" data-i18n="nav.about">אודות</a>
+    <a href="blog.html" data-i18n="nav.insights">תובנות</a>
+    <a href="contact.html" data-i18n="nav.contact">צור קשר</a>
+    <div class="lang-toggle">
+      <button class="lang-toggle__btn is-active" data-lang="he" onclick="toggleLanguage('he')">עב</button>
+      <button class="lang-toggle__btn" data-lang="en" onclick="toggleLanguage('en')">EN</button>
+    </div>
+  </div>
+
+
+  <!-- ABOUT HERO -->
+  <section class="page-hero section">
+    <div class="container">
+      <p class="t-eyebrow reveal-blur" style="color:var(--accent); margin-bottom:8px;" data-i18n="about.hero.eyebrow">אודותינו</p>
+      <h1 class="t-hero reveal-blur" data-i18n-html="about.hero.title">אנחנו בונים את<br>מה שיבוא.</h1>
+      <p class="t-body-lg page-hero__subtitle reveal" data-i18n="about.hero.subtitle">
+        NEXUS Digital הוא צוות של אסטרטגים, מעצבים ומהנדסים שמאמינים שמוצרים דיגיטליים מעולים מתחילים בחשיבה ברורה ומסתיימים בביצוע מושלם.
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT IMAGE -->
+  <section style="padding-bottom:var(--section-padding);">
+    <div class="container">
+      <div class="img-reveal" style="aspect-ratio:21/9;">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Team collaborating in a modern workspace" class="zoom-on-scroll" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- STORY -->
+  <section class="section section--elevated">
+    <div class="container" style="max-width:680px;">
+      <div class="reveal-left" style="margin-bottom:24px;">
+        <h2 class="t-tile" data-i18n="about.story.title">הקמנו את NEXUS מתוך תסכול פשוט.</h2>
+      </div>
+      <div class="reveal">
+        <p class="t-body-lg" style="margin-bottom:20px;" data-i18n="about.story.p1">יותר מדי סוכנויות התייחסו לאתרים כאל פרויקטי אמנות -- יפים, זוכי פרסים, ומנותקים לחלוטין מתוצאות עסקיות. אחרות התייחסו אליהם כאל פסי ייצור -- מהירים, זולים ושכיחים.</p>
+        <p class="t-body-lg" style="margin-bottom:20px;" data-i18n="about.story.p2">רצינו לבנות משהו אחר. סוכנות שבה אסטרטגים, מעצבים ומהנדסים עובדים יחד מהיום הראשון. שבה כל החלטה יצירתית מגובה בנתונים וכל החלטה טכנית מונחית על ידי עיצוב.</p>
+        <p class="t-body-lg" data-i18n="about.story.p3">זה היה ב-2019. מאז, שיתפנו פעולה עם מעל 80 חברות -- מסטארטאפים ממומנים ועד ארגונים מבוססים -- ועזרנו להם לחדד את המותג, לעצב מחדש את הנוכחות הדיגיטלית ולבנות את המערכות שמניעות צמיחה מדידה.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VALUES -->
+  <section class="section" id="values">
+    <div class="container">
+      <div class="text-center reveal-blur" style="margin-bottom:56px;">
+        <div class="section-divider"></div>
+        <p class="t-eyebrow" style="color:var(--accent); margin-bottom:8px;" data-i18n="about.values.eyebrow">הערכים שלנו</p>
+        <h2 class="t-section" data-i18n="about.values.title">מה שמנחה כל החלטה.</h2>
+      </div>
+
+      <div class="values-grid stagger-children">
+        <div class="card">
+          <div class="card__body">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <h3 data-i18n="about.val1.title">בהירות מעל תחכום</h3>
+            <p data-i18n="about.val1.desc">אנחנו פותרים בעיות אמיתיות עם פתרונות ישירים. בלי ז'רגון, בלי מורכבות מיותרת.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 data-i18n="about.val2.title">האומנות חשובה</h3>
+            <p data-i18n="about.val2.desc">הפרטים הם לא פרטים. הם עושים את המוצר. אנחנו אובססיביים לגבי כל פיקסל, כל שורת קוד.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            </div>
+            <h3 data-i18n="about.val3.title">תוצאות מעל תפוקה</h3>
+            <p data-i18n="about.val3.desc">אנחנו מודדים הצלחה לפי התוצאות שלכם, לא לפי המשלוחים שלנו. אם זה לא מזיז את המחט, אנחנו חושבים מחדש.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 data-i18n="about.val4.title">כנות רדיקלית</h3>
+            <p data-i18n="about.val4.desc">אנחנו אומרים לכם מה שצריך לשמוע, לא מה שרוצים לשמוע. אמון הוא הבסיס לעבודה מעולה.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROCESS -->
+  <section class="section section--elevated">
+    <div class="container">
+      <div class="text-center reveal-blur" style="margin-bottom:56px;">
+        <div class="section-divider"></div>
+        <p class="t-eyebrow" style="color:var(--accent); margin-bottom:8px;" data-i18n="about.process.eyebrow">התהליך שלנו</p>
+        <h2 class="t-section" data-i18n="about.process.title">איך אנחנו עובדים.</h2>
+      </div>
+
+      <div class="process-grid stagger-children">
+        <div class="process-step card">
+          <h3 data-i18n="about.proc1.title">חקירה</h3>
+          <p data-i18n="about.proc1.desc">צלילה עמוקה לשוק, ללקוחות ולמטרות שלכם.</p>
+        </div>
+        <div class="process-step card">
+          <h3 data-i18n="about.proc2.title">אסטרטגיה</h3>
+          <p data-i18n="about.proc2.desc">הגדרת מיצוב, ארכיטקטורה ומדדי הצלחה.</p>
+        </div>
+        <div class="process-step card">
+          <h3 data-i18n="about.proc3.title">עיצוב</h3>
+          <p data-i18n="about.proc3.desc">אבטיפוס, בדיקה ושיפור עד שכל אינטראקציה מושלמת.</p>
+        </div>
+        <div class="process-step card">
+          <h3 data-i18n="about.proc4.title">פיתוח</h3>
+          <p data-i18n="about.proc4.desc">קוד נקי ובעל ביצועים גבוהים עם ארכיטקטורה מודרנית.</p>
+        </div>
+        <div class="process-step card">
+          <h3 data-i18n="about.proc5.title">השקה</h3>
+          <p data-i18n="about.proc5.desc">פריסה חלקה עם ניטור ואופטימיזציה.</p>
+        </div>
+        <div class="process-step card">
+          <h3 data-i18n="about.proc6.title">צמיחה</h3>
+          <p data-i18n="about.proc6.desc">איטרציה מתמשכת המונחית על ידי נתוני משתמשים אמיתיים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="text-center reveal-blur" style="margin-bottom:56px;">
+        <div class="section-divider"></div>
+        <p class="t-eyebrow" style="color:var(--accent); margin-bottom:8px;" data-i18n="about.team.eyebrow">הצוות</p>
+        <h2 class="t-section" data-i18n="about.team.title">האנשים מאחורי הפיקסלים.</h2>
+      </div>
+
+      <div class="team-grid stagger-children">
+        <div class="card team-card">
+          <div class="card__body">
+            <div class="team-card__avatar">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80" alt="Maya Chen">
+            </div>
+            <h3 data-i18n="about.team1.name">מאיה צ&#x2019;ן</h3>
+            <p class="team-card__role" data-i18n="about.team1.role">מייסדת ומנהלת קריאייטיב</p>
+            <p data-i18n="about.team1.bio">שמונה שנות ניהול עיצוב בשני סטארטאפים של Y Combinator לפני הקמת NEXUS. אובססיבית להיררכיות טיפוגרפיה. זכתה להכרה מ-Awwwards ו-Fast Company.</p>
+          </div>
+        </div>
+
+        <div class="card team-card">
+          <div class="card__body">
+            <div class="team-card__avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="James Okafor">
+            </div>
+            <h3 data-i18n="about.team2.name">ג&#x2019;יימס אוקפור</h3>
+            <p class="team-card__role" data-i18n="about.team2.role">ראש הנדסה</p>
+            <p data-i18n="about.team2.bio">כותב קוד כמו שען בונה מנגנונים. ראש פיתוח צד-לקוח לשעבר בחברת פינטק מ-Fortune 500. נלהב מביצועי אתרים ונגישות.</p>
+          </div>
+        </div>
+
+        <div class="card team-card">
+          <div class="card__body">
+            <div class="team-card__avatar">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Sofia Reyes">
+            </div>
+            <h3 data-i18n="about.team3.name">סופיה רייס</h3>
+            <p class="team-card__role" data-i18n="about.team3.role">מנהלת אסטרטגיה</p>
+            <p data-i18n="about.team3.bio">האדם ששואל &#x201C;למה&#x201D; לפני שמישהו שואל &#x201C;איך.&#x201D; רקע בפסיכולוגיה התנהגותית. עזרה ללקוחות להשיג עלייה של 340% בלידים איכותיים.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- STATS -->
+  <section class="section section--elevated" id="stats">
+    <div class="container">
+      <div class="stats-grid stagger-children">
+        <div class="stat-item">
+          <div class="stat__number"><span class="counter" data-target="86">0</span>+</div>
+          <p class="stat__label" data-i18n="about.stats.label1">פרויקטים</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat__number"><span class="counter" data-target="7">0</span></div>
+          <p class="stat__label" data-i18n="about.stats.label2">שנים</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat__number"><span class="counter" data-target="18">0</span></div>
+          <p class="stat__label" data-i18n="about.stats.label3">חברי צוות</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat__number"><span class="counter" data-target="3">0</span></div>
+          <p class="stat__label" data-i18n="about.stats.label4">אזורי זמן</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <div class="footer-cta__orb footer-cta__orb--left"></div>
+    <div class="footer-cta__orb footer-cta__orb--right"></div>
+    <div class="container" style="position:relative; z-index:2;">
+      <h2 class="t-section reveal-blur" data-i18n-html="about.cta.title">אם אתם בונים משהו<br>שחשוב, בואו נדבר.</h2>
+      <div style="margin-top:28px;">
+        <a href="contact.html" class="link-cta reveal">
+          <span data-i18n="about.cta.link">התחילו שיחה</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__brand">
+          <a href="index.html" class="navbar__logo">NEXUS<span>.</span></a>
+          <p data-i18n="footer.brand-desc">אסטרטגיה, עיצוב ופיתוח לחברות שמוכנות להוביל.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16h-4.267z"/><path d="M4 20l6.768-6.768m2.46-2.46l6.772-6.772"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.services">שירותים</h4>
+          <a href="#" data-i18n="footer.brand-strategy">אסטרטגיית מותג</a><a href="#" data-i18n="footer.web-dev">פיתוח אתרים</a><a href="#" data-i18n="footer.uiux">עיצוב UI/UX</a><a href="#" data-i18n="footer.digital-mktg">שיווק דיגיטלי</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.company">החברה</h4>
+          <a href="about.html" data-i18n="footer.about">אודות</a><a href="blog.html" data-i18n="footer.insights">תובנות</a><a href="contact.html" data-i18n="footer.contact">צור קשר</a><a href="#" data-i18n="footer.careers">קריירה</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.stay-updated">הישארו מעודכנים</h4>
+          <p style="font-size:var(--font-footnote); color:var(--text-secondary); margin-bottom:8px;" data-i18n="footer.newsletter-desc">תובנות ישירות לתיבת הדואר שלכם.</p>
+          <form class="footer__newsletter" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="your@email.com" data-i18n-placeholder="contact.ph.newsletter" aria-label="אימייל">
+            <button type="submit" data-i18n="footer.subscribe">הרשמה</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 NEXUS Digital. כל הזכויות שמורות.</p>
+        <div style="display:flex; gap:16px;">
+          <a href="#" data-i18n="footer.privacy">פרטיות</a><a href="#" data-i18n="footer.terms">תנאים</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

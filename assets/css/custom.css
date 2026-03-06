@@ -1,0 +1,51 @@
+/* Language visibility */
+html.lang-he .content-en { display: none !important; }
+html.lang-en .content-he { display: none !important; }
+
+/* RTL / LTR body direction */
+html.lang-he body { direction: rtl; text-align: right; }
+html.lang-en body { direction: ltr; text-align: left; }
+
+/* Tables in RTL */
+html.lang-he table { direction: rtl; }
+html.lang-en table { direction: ltr; }
+
+/* Toggle button */
+.lang-toggle {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border: 1px solid #424242;
+  border-radius: 4px;
+  background: transparent;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.lang-toggle:hover {
+  background: #424242;
+  color: #fff;
+}
+
+/* Fix nav alignment in RTL */
+html.lang-he .site-nav {
+  float: left;
+}
+html.lang-he .site-title {
+  float: right;
+}
+html.lang-en .site-nav {
+  float: right;
+}
+html.lang-en .site-title {
+  float: left;
+}
+
+/* Fix footer alignment */
+html.lang-he .footer-col-wrapper {
+  direction: rtl;
+}
